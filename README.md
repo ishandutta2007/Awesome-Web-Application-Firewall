@@ -46,125 +46,28 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[Cloudflare WAF](https://www.cloudflare.com/application-services/products/waf/)**  
-
-  Cloud-based WAF protecting web applications and APIs with managed rules, custom rules, bot management, DDoS protection, and edge-based traffic inspection.
-
-
-
-- **[Imperva](https://www.imperva.com/)**  
-
-  Application and API security platform providing WAF, DDoS protection, bot management, API protection, and threat intelligence.
-
-
-
-- **[F5 Distributed Cloud WAAP](https://www.f5.com/cloud)**  
-
-  Web Application and API Protection platform combining WAF, API security, bot defense, DDoS mitigation, and distributed application security.
-
-
-
-- **[Akamai App & API Protector](https://www.akamai.com/products/app-and-api-protector)**  
-
-  Edge-based application and API security service providing WAF, automated attack detection, bot protection, and DDoS mitigation.
-
-
-
-- **[AWS WAF](https://aws.amazon.com/waf/)**  
-
-  Managed AWS WAF service for filtering web requests using managed rule groups, custom rules, rate-based rules, and integrations with AWS application infrastructure.
-
-
-
-- **[Azure Web Application Firewall](https://azure.microsoft.com/products/web-application-firewall)**  
-
-  Microsoft-managed WAF for Azure application delivery services, providing OWASP-based protection, custom rules, bot protection capabilities, and centralized policy management.
-
-
-
-- **[Fastly Next-Gen WAF](https://www.fastly.com/products/next-gen-waf)**  
-
-  Cloud WAF platform providing application protection, behavioral detection, API security, bot mitigation, and edge-based security controls.
-
-
-
-- **[Barracuda WAF](https://www.barracuda.com/products/application-protection/web-application-firewall)**  
-
-  Application-security platform providing WAF, API protection, bot management, DDoS defense, and application delivery capabilities.
-
-
-
-- **[Fortinet FortiWeb](https://www.fortinet.com/products/web-application-firewall)**  
-
-  Web application firewall providing protection against OWASP application attacks, bots, APIs, malicious traffic, and automated threats.
-
-
-
-- **[Radware Cloud WAF](https://www.radware.com/cybersecurity/application-security/web-application-firewall/)**  
-
-  Cloud-based WAF and application-security platform providing WAF, API protection, bot management, DDoS mitigation, and behavioral threat detection.
-
-
-
-- **[F5 BIG-IP Advanced WAF](https://www.f5.com/products/security/web-application-firewall)**  
-
-  Enterprise WAF providing application-layer protection, behavioral analysis, bot defense, API security, and advanced threat mitigation.
-
-
-
-- **[A10 Networks WAF](https://www.a10networks.com/products/application-delivery-controller/)**  
-
-  Application-delivery and security platform providing WAF and traffic-management capabilities for enterprise applications.
-
-
-
-- **[Citrix Web App and API Protection](https://www.netscaler.com/)**  
-
-  Application and API protection capabilities integrated with Citrix NetScaler application delivery infrastructure.
-
-
-
-- **[Check Point CloudGuard WAF](https://www.checkpoint.com/cloudguard/cloudguard-waf/)**  
-
-  Cloud application-security service providing WAF, API protection, bot mitigation, and automated threat prevention.
-
-
-
-- **[Alibaba Cloud WAF](https://www.alibabacloud.com/product/web-application-firewall)**  
-
-  Managed cloud WAF providing web attack protection, bot management, API security, and traffic control.
-
-
-
-- **[Google Cloud Armor](https://cloud.google.com/armor)**  
-
-  Google Cloud edge security service providing WAF capabilities, DDoS protection, adaptive protection, rate limiting, and application-layer traffic filtering.
-
-
-
-- **[Oracle Cloud WAF](https://www.oracle.com/security/cloud-security/web-application-firewall/)**  
-
-  Managed WAF service providing application-layer protection, access control, rate limiting, and security rule management.
-
-
-
-- **[Akamai Kona Site Defender](https://www.akamai.com/)**  
-
-  Akamai application-security technology providing edge WAF and DDoS protection for internet-facing applications.
-
-
-
-- **[Sucuri Website Firewall](https://sucuri.net/website-firewall/)**  
-
-  Cloud-based website firewall providing WAF, DDoS mitigation, malware protection, and application traffic filtering.
-
-
-
-- **[StackPath WAF](https://www.stackpath.com/)**  
-
-  Edge security and application delivery platform with WAF and traffic-filtering capabilities.
+| Product | Description | Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Cloudflare WAF](https://www.cloudflare.com/application-services/products/waf/)** | Cloud-based WAF protecting web applications and APIs with managed rules, custom rules, bot management, DDoS protection, and edge-based traffic inspection. | Free tier available ($0); Pro tier starts at $20/month (billed annually) or $25/month (monthly); Business tier at $200/month | Free forever plan includes unmetered DDoS mitigation and up to 5 custom firewall rules per domain |
+| **[AWS WAF](https://aws.amazon.com/waf/)** | Managed AWS WAF service for filtering web requests using managed rule groups, custom rules, rate-based rules, and AWS infrastructure integrations. | $5.00/month per Web ACL + $1.00/month per rule + $0.60 per 1M requests (prorated hourly) | 30-day free trial with 10,000,000 requests processed per month for AWS WAF Bot Control |
+| **[Google Cloud Armor](https://cloud.google.com/armor)** | Google Cloud edge security service providing WAF capabilities, DDoS protection, adaptive protection, rate limiting, and traffic filtering. | Standard tier: $5.00/month per security policy + $1.00/month per rule + $0.75 per 1M requests; Enterprise: $3,000/month | 90-day free trial with $300 in Google Cloud Platform credits |
+| **[Azure Web Application Firewall](https://azure.microsoft.com/products/web-application-firewall)** | Microsoft-managed WAF for Azure application delivery services, providing OWASP-based protection, custom rules, and bot protection. | $5.00/month per WAF policy + ~$0.448/hour (~$327/month) Application Gateway v2 base fee + $0.0144/hour/CU | 30-day free trial with $200 in Microsoft Azure credits |
+| **[Oracle Cloud WAF](https://www.oracle.com/security/cloud-security/web-application-firewall/)** | Managed WAF service providing application-layer protection, access control, rate limiting, and security rule management. | $5.00/month per rule set + $0.60 per 1M requests + $0.0015/GB outbound data transfer | 30-day free trial with $300 in Oracle Cloud Infrastructure credits |
+| **[Alibaba Cloud WAF](https://www.alibabacloud.com/product/web-application-firewall)** | Managed cloud WAF providing web attack protection, bot management, API security, and traffic control. | Basic subscription starts at ~$140/month; Pay-As-You-Go starts at $0.01 per SeCU (~$50/month base) | 30-day free trial via Alibaba Cloud free trial credits |
+| **[Sucuri Website Firewall](https://sucuri.net/website-firewall/)** | Cloud-based website firewall providing WAF, DDoS mitigation, malware protection, and application traffic filtering. | Basic plan starts at $9.99/month ($119.88/year); Pro plan at $19.98/month ($239.88/year) | 30-day free trial with full WAF protection for 1 website |
+| **[Imperva](https://www.imperva.com/)** | Application and API security platform providing WAF, DDoS protection, bot management, API protection, and threat intelligence. | Cloud WAF entry plans start at ~$59/month (Pro) and ~$299/month (Business) | 30-day free trial with full access to Cloud WAF and Login Protect features |
+| **[Fastly Next-Gen WAF](https://www.fastly.com/products/next-gen-waf)** | Cloud WAF platform providing application protection, behavioral detection, API security, and edge-based security controls. | Starts at ~$2,000/month (annual contract based on deployment model and request volume) | 30-day proof-of-concept (POC) trial environment via enterprise sales engagement |
+| **[Barracuda WAF](https://www.barracuda.com/products/application-protection/web-application-firewall)** | Application-security platform providing WAF, API protection, bot management, DDoS defense, and application delivery. | PAYG starts at ~$1.19/hour on AWS Marketplace; Cloud-delivered WAF starts at ~$199/month | 30-day free trial on AWS/Azure Marketplace with full feature access |
+| **[Fortinet FortiWeb](https://www.fortinet.com/products/web-application-firewall)** | Web application firewall providing protection against OWASP application attacks, bots, APIs, and automated threats. | FortiWeb Cloud starts at $0.04/hour or ~$20/month per web app via consumption points | 14-day to 30-day free trial on AWS, Azure, and GCP marketplaces |
+| **[Radware Cloud WAF](https://www.radware.com/cybersecurity/application-security/web-application-firewall/)** | Cloud-based WAF and application-security platform providing WAF, API protection, bot management, and DDoS mitigation. | Starting at ~$1,000/month for entry-level managed cloud WAF | 30-day free trial for enterprise evaluation with full managed WAF capabilities |
+| **[F5 Distributed Cloud WAAP](https://www.f5.com/cloud)** | Web Application and API Protection platform combining WAF, API security, bot defense, and DDoS mitigation. | AWS Marketplace PAYG starts at ~$3.704/hour (~$2,700/month); Subscription packages start at ~$500/month | 45-day free trial for enterprise evaluation via F5 Distributed Cloud console |
+| **[F5 BIG-IP Advanced WAF](https://www.f5.com/products/security/web-application-firewall)** | Enterprise WAF providing application-layer protection, behavioral analysis, bot defense, and advanced threat mitigation. | Starts at ~$1.96/hour on AWS/Azure Marketplace (~$1,430/month) or perpetual license from ~$4,000/instance | 30-day free trial on AWS and Azure marketplaces with all WAF modules enabled |
+| **[Check Point CloudGuard WAF](https://www.checkpoint.com/cloudguard/cloudguard-waf/)** | Cloud application-security service providing WAF, API protection, bot mitigation, and automated threat prevention. | Starts at ~$0.024/hour (~$17.50/month) or ~$299/month on AWS/Azure Marketplace | 30-day free trial on AWS Marketplace and Check Point Infinity Portal |
+| **[Citrix Web App and API Protection](https://www.netscaler.com/)** | Application and API protection capabilities integrated with Citrix NetScaler application delivery infrastructure. | Starts at ~$0.40/hour on AWS/Azure Marketplace (~$290/month) or pooling licenses from ~$3,000/year | 90-day free trial for NetScaler VPX Express / 30-day trial on cloud marketplaces |
+| **[A10 Networks WAF](https://www.a10networks.com/products/application-delivery-controller/)** | Application-delivery and security platform providing WAF and traffic-management capabilities for enterprise applications. | Starts at ~$0.80/hour on AWS Marketplace (~$584/month) or perpetual appliance/virtual licensing | 30-day free trial on AWS Marketplace |
+| **[Akamai App & API Protector](https://www.akamai.com/products/app-and-api-protector)** | Edge-based application and API security service providing WAF, automated attack detection, bot protection, and DDoS mitigation. | Enterprise contract starting at ~$2,000/month based on traffic tier and protected hostnames | 30-day proof-of-concept / evaluation trial via Akamai sales |
+| **[Akamai Kona Site Defender](https://www.akamai.com/)** | Akamai application-security technology providing edge WAF and DDoS protection for internet-facing applications. | Enterprise contract starting at ~$3,000/month based on bandwidth and scale | 30-day guided evaluation trial via Akamai enterprise sales |
+| **[StackPath WAF](https://www.stackpath.com/)** | Edge security and application delivery platform with WAF and traffic-filtering capabilities. | Discontinued (Operations ceased June 2024; historically started at $10.00/month) | Discontinued (Historically offered 30-day free trial with 1M requests/mo) |
 
 
 
