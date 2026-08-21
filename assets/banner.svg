@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050813" />
+      <stop offset="50%" stop-color="#0b1124" />
+      <stop offset="100%" stop-color="#070c1a" />
+    </linearGradient>
+
+    <!-- Shield Glow Gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#7f00ff" />
+    </linearGradient>
+
+    <!-- Text Shimmer Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#4facfe;#e0c3fc;#8ec5fc;#00f2fe" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#4facfe">
+        <animate attributeName="stop-color" values="#4facfe;#8000ff;#00f2fe;#4facfe;#4facfe" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00c6ff">
+        <animate attributeName="stop-color" values="#00c6ff;#00f2fe;#4facfe;#8000ff;#00c6ff" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="18" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Cyber Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 242, 254, 0.07)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1" fill="rgba(0, 242, 254, 0.25)" />
+    </pattern>
+
+    <!-- Keyframe / Inline Styling for Dynamic Effects -->
+    <style>
+      @keyframes pulseAura {
+        0%, 100% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.06); opacity: 1; }
+      }
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes scanlineMove {
+        0% { transform: translateY(-380px); opacity: 0; }
+        50% { opacity: 0.4; }
+        100% { transform: translateY(380px); opacity: 0; }
+      }
+      @keyframes floatData {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes streamFlow {
+        0% { stroke-dashoffset: 100; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .aura {
+        transform-origin: 180px 190px;
+        animation: pulseAura 4s ease-in-out infinite;
+      }
+      .radar-arm {
+        transform-origin: 180px 190px;
+        animation: radarSweep 6s linear infinite;
+      }
+      .scanline {
+        animation: scanlineMove 5s ease-in-out infinite;
+      }
+      .floating-badge {
+        animation: floatData 3.5s ease-in-out infinite;
+      }
+      .packet-stream {
+        stroke-dasharray: 8 12;
+        animation: streamFlow 2s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="380" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Background Grid -->
+  <rect width="1200" height="380" rx="16" fill="url(#cyberGrid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="180" cy="190" r="140" fill="#00f2fe" opacity="0.08" filter="url(#neonGlow)" />
+  <circle cx="850" cy="120" r="180" fill="#7f00ff" opacity="0.08" filter="url(#neonGlow)" />
+  <circle cx="1050" cy="300" r="130" fill="#00c6ff" opacity="0.06" filter="url(#neonGlow)" />
+
+  <!-- Decorative Circuit lines -->
+  <g stroke="rgba(0, 242, 254, 0.18)" stroke-width="1.5" fill="none">
+    <path d="M 0 190 L 100 190 L 140 150 L 160 150" />
+    <path d="M 180 30 L 180 100" />
+    <path d="M 220 230 L 260 270 L 400 270" />
+    <path d="M 320 190 L 440 190" />
+    <path d="M 750 60 L 820 60 L 850 90 L 1150 90" />
+    <path d="M 680 320 L 740 320 L 770 290 L 1100 290" />
+  </g>
+
+  <!-- Flowing Packet Animation Stream -->
+  <path d="M 220 190 L 420 190" stroke="#00f2fe" stroke-width="2" fill="none" class="packet-stream" opacity="0.6" />
+
+  <!-- Shield & Radar Assembly (Left Side) -->
+  <g id="ShieldAssembly">
+    <!-- Radar Rings -->
+    <circle cx="180" cy="190" r="110" fill="none" stroke="rgba(0, 242, 254, 0.15)" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="180" cy="190" r="85" fill="none" stroke="rgba(79, 172, 254, 0.25)" stroke-width="1" />
+    <circle cx="180" cy="190" r="60" fill="none" stroke="rgba(0, 242, 254, 0.2)" stroke-width="1" stroke-dasharray="2 4" />
+
+    <!-- Rotating Radar Scanner Arm -->
+    <g class="radar-arm">
+      <line x1="180" y1="190" x2="180" y2="80" stroke="url(#shieldGrad)" stroke-width="2" filter="url(#subtleGlow)" />
+      <polygon points="180,190 170,85 190,85" fill="rgba(0, 242, 254, 0.08)" />
+    </g>
+
+    <!-- Outer Pulsing Shield Glow Aura -->
+    <path class="aura" d="M 180 115 C 225 115 245 135 245 175 C 245 225 195 255 180 265 C 165 255 115 225 115 175 C 115 135 135 115 180 115 Z" fill="none" stroke="#00f2fe" stroke-width="3" opacity="0.5" filter="url(#neonGlow)" />
+
+    <!-- Main Shield Icon -->
+    <path d="M 180 120 C 220 120 238 138 238 175 C 238 220 192 248 180 258 C 168 248 122 220 122 175 C 122 138 140 120 180 120 Z" fill="#0c152d" stroke="url(#shieldGrad)" stroke-width="3.5" filter="url(#subtleGlow)" />
+
+    <!-- Firewall Grid / Lock / Emblem inside Shield -->
+    <g fill="none" stroke="#00f2fe" stroke-width="2">
+      <!-- Shield Center Core -->
+      <path d="M 180 145 L 205 160 L 205 195 L 180 210 L 155 195 L 155 160 Z" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" />
+      <circle cx="180" cy="180" r="8" fill="#00f2fe" filter="url(#subtleGlow)">
+        <animate attributeName="r" values="7;10;7" dur="2.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+      <line x1="180" y1="145" x2="180" y2="172" stroke="#00f2fe" />
+      <line x1="180" y1="188" x2="180" y2="210" stroke="#00f2fe" />
+      <line x1="155" y1="178" x2="172" y2="180" stroke="#00f2fe" />
+      <line x1="188" y1="180" x2="205" y2="178" stroke="#00f2fe" />
+    </g>
+  </g>
+
+  <!-- Typography & Content Area (Right Side) -->
+  <g id="Typography">
+    <!-- Top Cyber Tag -->
+    <g class="floating-badge">
+      <rect x="420" y="65" width="220" height="28" rx="14" fill="rgba(0, 242, 254, 0.1)" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1" />
+      <circle cx="435" cy="79" r="4" fill="#00f2fe">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite" />
+      </circle>
+      <text x="448" y="83" fill="#00f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">APPLICATION SECURITY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="420" y="145" fill="url(#textGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5" filter="url(#subtleGlow)">
+      Awesome WAF
+    </text>
+
+    <!-- Subtitle -->
+    <text x="420" y="185" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="500">
+      Web Application Firewall &amp; WAAP Matrix
+    </text>
+
+    <!-- Feature Pills / Badges in Banner -->
+    <g transform="translate(420, 215)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">
+      <!-- Pill 1: OWASP Defense -->
+      <g>
+        <rect x="0" y="0" width="130" height="32" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#38bdf8" stroke-width="1" />
+        <text x="14" y="20" fill="#38bdf8">🛡️ OWASP Top 10</text>
+      </g>
+      <!-- Pill 2: API Security -->
+      <g transform="translate(142, 0)">
+        <rect x="0" y="0" width="120" height="32" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#a855f7" stroke-width="1" />
+        <text x="14" y="20" fill="#c084fc">⚡ API Security</text>
+      </g>
+      <!-- Pill 3: Bot Management -->
+      <g transform="translate(274, 0)">
+        <rect x="0" y="0" width="135" height="32" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#ec4899" stroke-width="1" />
+        <text x="14" y="20" fill="#f472b6">🤖 Bot Mitigation</text>
+      </g>
+      <!-- Pill 4: DDoS Shield -->
+      <g transform="translate(421, 0)">
+        <rect x="0" y="0" width="125" height="32" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#10b981" stroke-width="1" />
+        <text x="14" y="20" fill="#34d399">🌊 DDoS Shield</text>
+      </g>
+    </g>
+
+    <!-- Bottom Description Line -->
+    <text x="420" y="285" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+      Curated comparison of enterprise SaaS WAAP solutions and open-source WAF engines.
+    </text>
+
+    <text x="420" y="310" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500">
+      ⭐ Star the repository • Maintained by the Security Community • 2026 Edition
+    </text>
+  </g>
+
+  <!-- Sweeping Scanline Effect across the banner -->
+  <g class="scanline" pointer-events="none">
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="rgba(0, 242, 254, 0.35)" stroke-width="2" />
+    <rect x="0" y="-30" width="1200" height="30" fill="url(#shieldGrad)" opacity="0.05" />
+  </g>
+
+  <!-- Border Highlight -->
+  <rect width="1200" height="380" rx="16" fill="none" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1.5" />
+</svg>
